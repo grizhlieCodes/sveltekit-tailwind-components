@@ -1,12 +1,15 @@
 <script>
+	//We get the below 'name' and 'toggled' variables from wherever we use this component in.
 	export let name,
 		toggled = false;
 	$: responsiveToggled = toggled;
 	import { createEventDispatcher } from 'svelte';
 	const dispatch = createEventDispatcher();
 
+	//When button clicked, dispatch an event.
+	//We control what happens THERE, not here.
+	//Include the name of the dispatched 'toggle' incase you use multiple toggles and need to differentiate between them.
 	const dispatchToggle = () => {
-        console.log(`Dispatching toggled with name: ${name}`)
 		dispatch('toggled', name);
 	};
 </script>

@@ -1,30 +1,30 @@
 <script>
 	import '../app.css';
 	import Toggle from '$lib/Toggle.svelte'
-	import {toggleDarkMode, checkDarkMode, setDarkMode} from '$lib/scripts/helpers.js'
 	import {onMount} from 'svelte';
-	let darkMode
+	import DarkMode from '$lib/stores/darkMode.js' //This is where all the work happens
+
+	$: dmToggleData = {
+		name: 'dmToggle',
+		toggled: $DarkMode
+	}
 	
 	onMount(() => {
-		darkMode = checkDarkMode()
-		setDarkMode(darkMode)
-		console.log('checked dm: ', darkMode)
+		DarkMode.checkDarkmode()
 	})
 
 	const handleToggle = (e) => {
 		let name = e.detail
 		if(name === 'dmToggle'){
-			toggleDarkMode()
+			DarkMode.toggleDarkmode()
 		}
-		darkMode = !darkMode
-		
 	}
 </script>
 
 <slot />
 
 <div class="absolute left-[2rem] bottom-[2rem]">
-	<Toggle name="dmToggle" on:toggled={handleToggle} toggled={darkMode} />
+	<Toggle {...dmToggleData} on:toggled={handleToggle}/>
 </div>
 
 <style>
