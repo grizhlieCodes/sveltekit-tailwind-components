@@ -9,6 +9,7 @@ const config = {
 		extend: {
 			colors: {
 				teal: colors.teal,
+				orange: colors.orange
 			},
 		}
 	},
