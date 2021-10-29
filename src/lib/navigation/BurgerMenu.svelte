@@ -1,14 +1,10 @@
 <script>
 	import { createEventDispatcher } from 'svelte';
-    // import img from '../../../static/images/'
 	const dispatch = createEventDispatcher();
-
 	export let burgerMenuClicked = false;
-
     const dispatchClick = () => {
         dispatch('burgerClicked')
     };
-
 </script>
 
 <div
@@ -16,9 +12,9 @@
 	cursor-pointer group sm:hidden"
 	on:click={dispatchClick}>
 	<span
-		class=" bg-gray-400 dark:bg-gray-300 w-full h-[0.2rem] block transition-all duration-200 {burgerMenuClicked ? 'rotate-45  ' : ''}" />
+		class=" bg-gray-400 dark:bg-gray-300 w-full h-[0.2rem] block transition-all duration-200 {burgerMenuClicked ? 'rotate-45' : ''}" />
 	<span
-		class=" bg-gray-400 dark:bg-gray-300 w-full h-[0.2rem] block transition-all duration-200 {burgerMenuClicked ? ' scale-50 opacity-0 ' : ''}" />
+		class=" bg-gray-400 dark:bg-gray-300 w-full h-[0.2rem] block transition-all duration-200 {burgerMenuClicked ? ' scale-50 opacity-0' : ''}" />
 	<span
 		class=" bg-gray-400 dark:bg-gray-300 w-full h-[0.2rem] block transition-all duration-200 {burgerMenuClicked ? '-rotate-45  ' : ''}" />
 </div>
