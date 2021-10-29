@@ -23,7 +23,7 @@
 </script>
 
 <PlainNavBar>
-	<svg width="100%" height="100%" viewBox="0 0 222 222" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;" slot="logo">
+	<svg width="100%" height="100%" viewBox="0 0 222 222" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;" slot="logo" class=" transition-colors">
 		<circle cx="110.872" cy="48.693" r="48.693"/>
 		<circle cx="172.974" cy="173.051" r="48.693"/>
 		<circle cx="48.693" cy="173.051" r="48.693"/>
@@ -38,5 +38,13 @@
 </div>
 
 <style>
-
+	svg {
+		transition-duration: 0ms;
+	}
+	:global(body.dark){
+		fill: rgba(15, 118, 110, 1);
+	}
+	:global(body:not(.dark)){
+		fill: rgba(45, 212, 191, 1);
+	}
 </style>
