@@ -1,8 +1,8 @@
 <script>
 	import { fly } from 'svelte/transition';
-	import BurgerMenu from './BurgerMenu.svelte';
-	import HeaderModal from './HeaderModal.svelte'
-	import MobileLink from '$lib/navigation/MobileLink.svelte'
+	import BurgerMenu from '../BurgerMenu.svelte';
+	import HeaderModal from './NavModal.svelte'
+	import MobileLink from '$lib/navigation/normal-nav/MobileLink.svelte'
 
 	let links = [
 		{
