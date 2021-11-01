@@ -71,9 +71,9 @@
 		transition-duration: 0ms;
 	}
 	:global(body.dark) {
-		fill: rgba(15, 118, 110, 1);
+		fill: #6366F1;
 	}
 	:global(body:not(.dark)) {
-		fill: rgba(45, 212, 191, 1);
+		fill: #6366F1;
 	}
 </style>

@@ -24,7 +24,7 @@ const config = {
 				"desktop": '1248px',
 				"desktop-wide": '1440px'
 			}
-		}
+		},
 	},
 
 	plugins: []
